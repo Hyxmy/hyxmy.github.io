@@ -6,34 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>position的用法 | Mengying</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="首先是w3School给position的定义
-
-值    描述
-
-absolute    生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。    元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。
-
-fixed    生成绝对定位的元素，相对于浏览器窗口进行定位。    元素的位置通过 “left”, “top”, “r">
+  <meta name="description" content="首先是w3School给position的定义absolute生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。
+fixed生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。
+re">
 <meta property="og:type" content="article">
 <meta property="og:title" content="position的用法">
 <meta property="og:url" content="http://yoursite.com/2016/08/01/position的用法/index.html">
 <meta property="og:site_name" content="Mengying">
-<meta property="og:description" content="首先是w3School给position的定义
-
-值    描述
-
-absolute    生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。    元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。
-
-fixed    生成绝对定位的元素，相对于浏览器窗口进行定位。    元素的位置通过 “left”, “top”, “r">
-<meta property="og:updated_time" content="2016-08-01T07:58:18.593Z">
+<meta property="og:description" content="首先是w3School给position的定义absolute生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。
+fixed生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。
+re">
+<meta property="og:updated_time" content="2016-08-01T08:11:34.235Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="position的用法">
-<meta name="twitter:description" content="首先是w3School给position的定义
-
-值    描述
-
-absolute    生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。    元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。
-
-fixed    生成绝对定位的元素，相对于浏览器窗口进行定位。    元素的位置通过 “left”, “top”, “r">
+<meta name="twitter:description" content="首先是w3School给position的定义absolute生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。
+fixed生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。
+re">
   
     <link rel="alternative" href="/atom.xml" title="Mengying" type="application/atom+xml">
   
@@ -254,20 +242,14 @@ fixed    生成绝对定位的元素，相对于浏览器窗口进行定位。  
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="首先是w3School给position的定义"><a href="#首先是w3School给position的定义" class="headerlink" title="首先是w3School给position的定义"></a>首先是w3School给position的定义</h3><p><table></table></p>
-<p><th></th></p>
-<p><td>值</td>    <td>描述</td><br></p>
-<p><tr></tr></p>
-<p><td>absolute</td>    <td>生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。<br>    元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。</td><br></p>
-<p><tr></tr></p>
-<p><td>fixed</td>    <td>生成绝对定位的元素，相对于浏览器窗口进行定位。<br>    元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。</td><br></p>
-<p><tr></tr></p>
-<p><td>relative</td>    <td>生成相对定位的元素，相对于其正常位置进行定位。<br>    因此，”left:20” 会向元素的 LEFT 位置添加 20 像素。</td><br></p>
-<p><tr></tr></p>
-<p><td>static</td>    <td>默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。</td><br></p>
-<p><tr></tr></p>
-<p><td>inherit</td>    <td>规定应该从父元素继承 position 属性的值。</td><br><br></p>
-<h3 id="相对定位和绝对定位"><a href="#相对定位和绝对定位" class="headerlink" title="相对定位和绝对定位"></a>相对定位和绝对定位</h3><h4 id="包含属性：relative（相对）-absolute（绝对）"><a href="#包含属性：relative（相对）-absolute（绝对）" class="headerlink" title="包含属性：relative（相对） absolute（绝对）"></a>包含属性：relative（相对） absolute（绝对）</h4><p>1.position:relative; 如果对一个元素进行相对定位，首先它将出现在它所在的位置上。然后通过设置垂直或水平位置，让这个元素”相对于”它的原始起点进行移动。（再一点，相对定位时，无论是否进行移动，元素仍然占据原来的空间。因此，移动元素会导致它覆盖其他框）</p>
+        <h2 id="首先是w3School给position的定义"><a href="#首先是w3School给position的定义" class="headerlink" title="首先是w3School给position的定义"></a>首先是w3School给position的定义</h2><h4 id="absolute"><a href="#absolute" class="headerlink" title="absolute"></a>absolute</h4><p>生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。</p>
+<h4 id="fixed"><a href="#fixed" class="headerlink" title="fixed"></a>fixed</h4><p>生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。</p>
+<h4 id="relative"><a href="#relative" class="headerlink" title="relative"></a>relative</h4><p>生成相对定位的元素，相对于其正常位置进行定位。因此，”left:20” 会向元素的 LEFT 位置添加 20 像素。</p>
+<h4 id="static"><a href="#static" class="headerlink" title="static"></a>static</h4><p>默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。</p>
+<h4 id="inherit"><a href="#inherit" class="headerlink" title="inherit"></a>inherit</h4><p>规定应该从父元素继承 position 属性的值。</p>
+<a id="more"></a>
+<h2 id="相对定位和绝对定位"><a href="#相对定位和绝对定位" class="headerlink" title="相对定位和绝对定位"></a>相对定位和绝对定位</h2><p> 包含属性：relative（相对） absolute（绝对）</p>
+<p>1.position:relative; 如果对一个元素进行相对定位，首先它将出现在它所在的位置上。然后通过设置垂直或水平位置，让这个元素”相对于”它的原始起点进行移动。（再一点，相对定位时，无论是否进行移动，元素仍然占据原来的空间。因此，移动元素会导致它覆盖其他框）</p>
 <p>2.position:absolute; 表示绝对定位，位置将依据浏览器左上角开始计算。 绝对定位使元素脱离文档流，因此不占据空间。普通文档流中元素的布局就像绝对定位的元素不存在时一样。（因为绝对定位的框与文档流无关，所以它们可以覆盖页面上的其他元素并可以通过z-index来控制它层级次序。z-index的值越高，它显示的越在上层。）</p>
 <p>3.父容器使用相对定位，子元素使用绝对定位后，这样子元素的位置不再相对于浏览器左上角，而是相对于父容器左上角</p>
 <p>4.相对定位和绝对定位需要配合top、right、bottom、left使用来定位具体位置，这四个属性只有在该元素使用定位后才生效，其它情况下无效。另外这四个属性同时只能使用相邻的两个，不能即使用上又使用下，或即使用左，又使用右</p>
