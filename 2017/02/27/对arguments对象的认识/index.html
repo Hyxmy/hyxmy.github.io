@@ -6,22 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>对arguments对象的认识 | Mengying</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="arguments不是一个Array的一个实例在JavaScript中，arguments对象是比较特别的一个对象，实际上是当前函数的一个内置属性。arguments非常类似Array，但实际上又不是一个Array实例。
-下面我们可以通过一个小栗子证明一下
-1234567Array.prototype.aTest = &amp;quot;test&amp;quot;;function fun()&amp;#123;  c">
+  <meta name="description" content="arguments不是一个Array的一个实例在JavaScript中，arguments对象是比较特别的一个对象，实际上是当前函数的一个内置属性。arguments非常类似Array，但实际上又不是一个Array实例。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="对arguments对象的认识">
 <meta property="og:url" content="http://yoursite.com/2017/02/27/对arguments对象的认识/index.html">
 <meta property="og:site_name" content="Mengying">
-<meta property="og:description" content="arguments不是一个Array的一个实例在JavaScript中，arguments对象是比较特别的一个对象，实际上是当前函数的一个内置属性。arguments非常类似Array，但实际上又不是一个Array实例。
-下面我们可以通过一个小栗子证明一下
-1234567Array.prototype.aTest = &amp;quot;test&amp;quot;;function fun()&amp;#123;  c">
-<meta property="og:updated_time" content="2017-02-27T14:38:26.356Z">
+<meta property="og:description" content="arguments不是一个Array的一个实例在JavaScript中，arguments对象是比较特别的一个对象，实际上是当前函数的一个内置属性。arguments非常类似Array，但实际上又不是一个Array实例。">
+<meta property="og:updated_time" content="2017-02-27T14:43:42.507Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对arguments对象的认识">
-<meta name="twitter:description" content="arguments不是一个Array的一个实例在JavaScript中，arguments对象是比较特别的一个对象，实际上是当前函数的一个内置属性。arguments非常类似Array，但实际上又不是一个Array实例。
-下面我们可以通过一个小栗子证明一下
-1234567Array.prototype.aTest = &amp;quot;test&amp;quot;;function fun()&amp;#123;  c">
+<meta name="twitter:description" content="arguments不是一个Array的一个实例在JavaScript中，arguments对象是比较特别的一个对象，实际上是当前函数的一个内置属性。arguments非常类似Array，但实际上又不是一个Array实例。">
   
     <link rel="alternative" href="/atom.xml" title="Mengying" type="application/atom+xml">
   
@@ -86,7 +80,7 @@
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -242,7 +236,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="arguments不是一个Array的一个实例"><a href="#arguments不是一个Array的一个实例" class="headerlink" title="arguments不是一个Array的一个实例"></a>arguments不是一个Array的一个实例</h2><p>在JavaScript中，arguments对象是比较特别的一个对象，实际上是当前函数的一个内置属性。arguments非常类似Array，但实际上又不是一个Array实例。</p>
+        <h2 id="arguments不是一个Array的一个实例"><a href="#arguments不是一个Array的一个实例" class="headerlink" title="arguments不是一个Array的一个实例"></a>arguments不是一个Array的一个实例</h2><p>在JavaScript中，arguments对象是比较特别的一个对象，实际上是当前函数的一个内置属性。arguments非常类似Array，但实际上又不是一个Array实例。<a id="more"></a></p>
 <p>下面我们可以通过一个小栗子证明一下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Array.prototype.aTest = &quot;test&quot;;</div><div class="line">function fun()&#123;</div><div class="line">  console.log(fun.arguments.aTest);  //undefined</div><div class="line">  console.log(fun.arguments[0]);     //1</div><div class="line">&#125;</div><div class="line"></div><div class="line">fun(1);</div></pre></td></tr></table></figure>
 <h2 id="arguments对象的长度"><a href="#arguments对象的长度" class="headerlink" title="arguments对象的长度"></a>arguments对象的长度</h2><p>arguments对象的长度是由实参个数而不是形参个数决定的。形参是函数内部重新开辟内存空间存储的变量，但是其与arguments对象内存空间并不重叠。对于arguments和值都存在的情况下，两者值是同步的，但是针对其中一个无值的情况下，对于此无值的情形值不会得以同步。</p>
