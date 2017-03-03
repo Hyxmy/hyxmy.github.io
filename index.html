@@ -76,7 +76,7 @@
 						<li>Links</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -115,7 +115,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/Js/" style="font-size: 10px;">Js</a> <a href="/tags/技术/" style="font-size: 10px;">技术</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a> <a href="/tags/音乐/" style="font-size: 20px;">音乐</a>
+						<a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/Js/" style="font-size: 20px;">Js</a> <a href="/tags/技术/" style="font-size: 10px;">技术</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a> <a href="/tags/音乐/" style="font-size: 20px;">音乐</a>
 					</div>
 				</section>
 				
@@ -196,6 +196,71 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-Js的作用域与作用链" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/03/Js的作用域与作用链/" class="article-date">
+  	<time datetime="2017-03-03T08:12:18.000Z" itemprop="datePublished">2017-03-03</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/03/Js的作用域与作用链/">Js的作用域与作用链</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、函数作用域："><a href="#一、函数作用域：" class="headerlink" title="一、函数作用域："></a>一、函数作用域：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">var scope=&quot;global&quot;;  </div><div class="line">function fun()&#123;  </div><div class="line">    console.log(scope);  //undefined</div><div class="line">    var scope=&quot;local&quot;  </div><div class="line">    console.log(scope);  //local</div><div class="line">&#125;  </div><div class="line">fun();  </div><div class="line"></div><div class="line">var scope=&quot;global&quot;;  </div><div class="line">function fun()&#123;  </div><div class="line">    var scope;  </div><div class="line">    console.log(scope);  //undefined</div><div class="line">    scope=&quot;local&quot;  </div><div class="line">    console.log(scope);  //local</div><div class="line">&#125;  </div><div class="line">fun();</div></pre></td></tr></table></figure>
+<p>上面两段代码意思相等<br>Js的作用域分全局和局部（函数体以及这个函数体嵌套的任意函数体）<br>Js没有块级作用域</p>
+<p>当使用var声明一个变量时，创建的这个属性是不可配置的，也就是说无法通过delete运算符删除<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var name=1    -&gt;不可删除</div><div class="line">sex=&quot;f&quot;         -&gt;可删除</div><div class="line">this.age=22    -&gt;可删除</div></pre></td></tr></table></figure></p>
+<h2 id="二、作用域链："><a href="#二、作用域链：" class="headerlink" title="二、作用域链："></a>二、作用域链：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">name=&quot;xmy&quot;;  </div><div class="line">function fun()&#123;  </div><div class="line">    var name=&quot;axmy&quot;;  </div><div class="line">    function s()&#123;  </div><div class="line">        var name=&quot;bxmy&quot;;  </div><div class="line">        console.log(name);  //bxmy  </div><div class="line">    &#125;  </div><div class="line">    function ss()&#123;  </div><div class="line">        console.log(name);  //axmy </div><div class="line">    &#125;  </div><div class="line">    s();  </div><div class="line">    ss();  </div><div class="line">&#125;  </div><div class="line">fun();</div></pre></td></tr></table></figure>
+<p>对于在ss()的找name,作用域链是： ss()-&gt;fun()-&gt;window</p>
+<p>一个容易出错的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;head lang=&quot;en&quot;&gt;</div><div class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</div><div class="line">    &lt;title&gt;&lt;/title&gt;</div><div class="line">    &lt;script&gt;  </div><div class="line">    function buttonInit()&#123;  </div><div class="line">        for(var i=1;i&lt;4;i++)&#123;  </div><div class="line">            var b=document.getElementById(&quot;button&quot;+i);  </div><div class="line">            b.addEventListener(&quot;click&quot;,function()&#123; </div><div class="line">    alert(&quot;Button&quot;+i);</div><div class="line">    &#125;,false);  </div><div class="line">        &#125;  </div><div class="line">    &#125;  </div><div class="line">    window.onload=buttonInit;  </div><div class="line">    &lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;input id=&quot;button1&quot; type=&quot;button&quot; value=&quot;选项1&quot;/&gt;</div><div class="line">&lt;input id=&quot;button2&quot; type=&quot;button&quot; value=&quot;选项2&quot;/&gt;</div><div class="line">&lt;input id=&quot;button3&quot; type=&quot;button&quot; value=&quot;选项3&quot;/&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;  </div><div class="line">&lt;/html&gt;</div><div class="line">分别点击三个按钮，都弹出了Button4</div><div class="line">循环的速度很快，当注册事件结束后，i的值为4，当点击按钮时，事件函数即function()&#123; alert(&quot;Button&quot;+i);&#125;这个匿名函数中没有i,根据作用域链，所以到buttonInit函数中找，此时i的值为4，所以弹出”button4“。</div><div class="line"></div><div class="line">## 三、延长作用域链</div><div class="line"></div><div class="line"> try-catch 语句的 catch 块；</div><div class="line"> with 语句（用来临时扩展作用域链，将语句中的对象添加到作用域的头部）。</div></pre></td></tr></table></figure>
+<p>ob={<br>    name:”a”,<br>    ab:{<br>        name:”b”,<br>        }<br>      };<br>with(ob.ab){<br>    console.log(name);<br>}<br>```</p>
+<p>with语句将ob.ab添加到当前作用域链的头部，所以输出的就是：”b”.<br>with语句结束后，作用域链恢复正常。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Js/">Js</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-对arguments对象的认识" class="article article-type-post" itemscope itemprop="blogPost">
   
