@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/02/27/对arguments对象的认识/index.html">
 <meta property="og:site_name" content="Mengying">
 <meta property="og:description" content="arguments不是一个Array的一个实例在JavaScript中，arguments对象是比较特别的一个对象，实际上是当前函数的一个内置属性。arguments非常类似Array，但实际上又不是一个Array实例。">
-<meta property="og:updated_time" content="2017-03-03T08:48:36.661Z">
+<meta property="og:updated_time" content="2017-03-05T03:19:44.169Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对arguments对象的认识">
 <meta name="twitter:description" content="arguments不是一个Array的一个实例在JavaScript中，arguments对象是比较特别的一个对象，实际上是当前函数的一个内置属性。arguments非常类似Array，但实际上又不是一个Array实例。">
@@ -20,7 +20,7 @@
     <link rel="alternative" href="/atom.xml" title="Mengying" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/img/favicon.jpg">
   
   <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -33,7 +33,7 @@
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			
-			<img lazy-src="/img/author.jpg" class="js-avatar">
+			<img lazy-src="/img/author.png" class="js-avatar">
 			
 		</a>
 
@@ -63,11 +63,6 @@
 						</div>
 						
 						
-						<div class="icon-wrap icon-me hide" data-idx="3">
-							<div class="user"></div>
-							<div class="shoulder"></div>
-						</div>
-						
 					</div>
 					
 				</div>
@@ -79,8 +74,6 @@
 						
 						<li>Links</li>
 						
-						
-						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -119,7 +112,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/Js/" style="font-size: 20px;">Js</a> <a href="/tags/技术/" style="font-size: 10px;">技术</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a> <a href="/tags/音乐/" style="font-size: 20px;">音乐</a>
+						<a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/Js/" style="font-size: 10px;">Js</a> <a href="/tags/技术/" style="font-size: 20px;">技术</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a> <a href="/tags/音乐/" style="font-size: 10px;">音乐</a>
 					</div>
 				</section>
 				
@@ -139,12 +132,6 @@
 				
 
 				
-				
-				<section class="switch-part switch-part4">
-				
-					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
-				</section>
-				
 			</div>
 		</div>
 	</header>				
@@ -161,7 +148,7 @@
 		<header id="header" class="inner">
 			<div class="profilepic">
 			
-				<img lazy-src="/img/author.jpg" class="js-avatar">
+				<img lazy-src="/img/author.png" class="js-avatar">
 			
 			</div>
 			<hgroup>
@@ -225,7 +212,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Js/">Js</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Js/">Js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
 	</div>
 
         
@@ -238,9 +225,9 @@
       
         <h2 id="arguments不是一个Array的一个实例"><a href="#arguments不是一个Array的一个实例" class="headerlink" title="arguments不是一个Array的一个实例"></a>arguments不是一个Array的一个实例</h2><p>在JavaScript中，arguments对象是比较特别的一个对象，实际上是当前函数的一个内置属性。arguments非常类似Array，但实际上又不是一个Array实例。<a id="more"></a></p>
 <p>下面我们可以通过一个小栗子证明一下</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Array</span>.prototype.aTest = <span class="string">"test"</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(fun.arguments.aTest);  <span class="comment">//undefined</span></div><div class="line">  <span class="built_in">console</span>.log(fun.arguments[<span class="number">0</span>]);     <span class="comment">//1</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">fun(<span class="number">1</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Array</span>.prototype.aTest = <span class="string">"test"</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(fun.arguments.aTest);  <span class="comment">//undefined</span></span><br><span class="line">  <span class="built_in">console</span>.log(fun.arguments[<span class="number">0</span>]);     <span class="comment">//1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">fun(<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
 <h2 id="arguments对象的长度"><a href="#arguments对象的长度" class="headerlink" title="arguments对象的长度"></a>arguments对象的长度</h2><p>arguments对象的长度是由实参个数而不是形参个数决定的。形参是函数内部重新开辟内存空间存储的变量，但是其与arguments对象内存空间并不重叠。对于arguments和值都存在的情况下，两者值是同步的，但是针对其中一个无值的情况下，对于此无值的情形值不会得以同步。</p>
-<p>又一个小栗子<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">a, b, c</span>)</span>&#123;</div><div class="line">    a = <span class="number">100</span>;</div><div class="line">	<span class="built_in">console</span>.log(<span class="built_in">arguments</span>[<span class="number">0</span>]);       <span class="comment">//100</span></div><div class="line">	<span class="built_in">arguments</span>[<span class="number">0</span>] = <span class="string">"xmy"</span>;</div><div class="line">	<span class="built_in">console</span>.log(a);                  <span class="comment">//xmy</span></div><div class="line">	<span class="built_in">console</span>.log(c);                  <span class="comment">//undefined</span></div><div class="line">	c = <span class="number">200</span>;</div><div class="line">	<span class="built_in">console</span>.log(<span class="built_in">arguments</span>[<span class="number">2</span>]);       <span class="comment">//undefined</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">f(<span class="number">1</span>, <span class="number">2</span>);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">a, b, c</span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="built_in">arguments</span>.length);   <span class="comment">//2</span></div><div class="line">	<span class="built_in">console</span>.log(c);                  <span class="comment">//undefined</span></div><div class="line">	<span class="built_in">arguments</span>[<span class="number">2</span>] = <span class="number">200</span>;</div><div class="line">	<span class="built_in">console</span>.log(<span class="built_in">arguments</span>[<span class="number">2</span>]);       <span class="comment">//200</span></div><div class="line">	<span class="built_in">console</span>.log(c);                  <span class="comment">//undefined</span></div><div class="line">	<span class="built_in">console</span>.log(<span class="built_in">arguments</span>.length);   <span class="comment">//2</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">f(<span class="number">1</span>, <span class="number">2</span>);</div></pre></td></tr></table></figure></p>
+<p>又一个小栗子<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">a, b, c</span>)</span>&#123;</span><br><span class="line">    a = <span class="number">100</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">arguments</span>[<span class="number">0</span>]);       <span class="comment">//100</span></span><br><span class="line">	<span class="built_in">arguments</span>[<span class="number">0</span>] = <span class="string">"xmy"</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(a);                  <span class="comment">//xmy</span></span><br><span class="line">	<span class="built_in">console</span>.log(c);                  <span class="comment">//undefined</span></span><br><span class="line">	c = <span class="number">200</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">arguments</span>[<span class="number">2</span>]);       <span class="comment">//undefined</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">a, b, c</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">arguments</span>.length);   <span class="comment">//2</span></span><br><span class="line">	<span class="built_in">console</span>.log(c);                  <span class="comment">//undefined</span></span><br><span class="line">	<span class="built_in">arguments</span>[<span class="number">2</span>] = <span class="number">200</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">arguments</span>[<span class="number">2</span>]);       <span class="comment">//200</span></span><br><span class="line">	<span class="built_in">console</span>.log(c);                  <span class="comment">//undefined</span></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">arguments</span>.length);   <span class="comment">//2</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f(<span class="number">1</span>, <span class="number">2</span>);</span><br></pre></td></tr></table></figure></p>
 <h2 id="arguments的其他属性"><a href="#arguments的其他属性" class="headerlink" title="arguments的其他属性"></a>arguments的其他属性</h2><p>arguments.callee引用函数自身，在使用函数递归时可以使用</p>
 
       
