@@ -4,18 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>clip-path 属性 | Mengying</title>
+  <title>数组检测方法 | Mengying</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="神奇的clip-path属性在Web网页中主要是以矩形分布的。而平面媒体则倾向于更多不同的形状。造成这种差异的原因是因为缺少合适的工具去实现我们平面媒体中的内容。这也就造成了很多设计师的创意发挥，就算是有创意，前端实现也将付出巨大的开发成本。">
+  <meta name="description" content="数组检测最准确的方法前几天碰到一个牛客网的一个面试题是关于数组检测的，原题如下：
+12345如何判断一个js对象是否是Array,arr为要判断的对象，其中最准确的方法是？A. typeof(arr)B. arr instanceof ArrayC. arr.toString===&apos;[object Array]&apos;;D. Object.prototype.toString.call(arr) ===">
 <meta property="og:type" content="article">
-<meta property="og:title" content="clip-path 属性">
-<meta property="og:url" content="http://yoursite.com/2016/08/09/clip-path-属性/index.html">
+<meta property="og:title" content="数组检测方法">
+<meta property="og:url" content="http://yoursite.com/2017/03/07/数组检测方法/index.html">
 <meta property="og:site_name" content="Mengying">
-<meta property="og:description" content="神奇的clip-path属性在Web网页中主要是以矩形分布的。而平面媒体则倾向于更多不同的形状。造成这种差异的原因是因为缺少合适的工具去实现我们平面媒体中的内容。这也就造成了很多设计师的创意发挥，就算是有创意，前端实现也将付出巨大的开发成本。">
-<meta property="og:updated_time" content="2017-03-05T03:19:29.750Z">
+<meta property="og:description" content="数组检测最准确的方法前几天碰到一个牛客网的一个面试题是关于数组检测的，原题如下：
+12345如何判断一个js对象是否是Array,arr为要判断的对象，其中最准确的方法是？A. typeof(arr)B. arr instanceof ArrayC. arr.toString===&apos;[object Array]&apos;;D. Object.prototype.toString.call(arr) ===">
+<meta property="og:updated_time" content="2017-03-07T12:30:54.166Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="clip-path 属性">
-<meta name="twitter:description" content="神奇的clip-path属性在Web网页中主要是以矩形分布的。而平面媒体则倾向于更多不同的形状。造成这种差异的原因是因为缺少合适的工具去实现我们平面媒体中的内容。这也就造成了很多设计师的创意发挥，就算是有创意，前端实现也将付出巨大的开发成本。">
+<meta name="twitter:title" content="数组检测方法">
+<meta name="twitter:description" content="数组检测最准确的方法前几天碰到一个牛客网的一个面试题是关于数组检测的，原题如下：
+12345如何判断一个js对象是否是Array,arr为要判断的对象，其中最准确的方法是？A. typeof(arr)B. arr instanceof ArrayC. arr.toString===&apos;[object Array]&apos;;D. Object.prototype.toString.call(arr) ===">
   
     <link rel="alternative" href="/atom.xml" title="Mengying" type="application/atom+xml">
   
@@ -186,11 +189,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-clip-path-属性" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-数组检测方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/08/09/clip-path-属性/" class="article-date">
-  	<time datetime="2016-08-09T11:06:30.000Z" itemprop="datePublished">2016-08-09</time>
+      <a href="/2017/03/07/数组检测方法/" class="article-date">
+  	<time datetime="2017-03-07T11:41:01.000Z" itemprop="datePublished">2017-03-07</time>
 </a>
     </div>
   
@@ -203,7 +206,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      clip-path 属性
+      数组检测方法
     </h1>
   
 
@@ -212,7 +215,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Js/">Js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
 	</div>
 
         
@@ -223,12 +226,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="神奇的clip-path属性"><a href="#神奇的clip-path属性" class="headerlink" title="神奇的clip-path属性"></a><strong>神奇的clip-path属性</strong></h2><p>在Web网页中主要是以矩形分布的。而平面媒体则倾向于更多不同的形状。造成这种差异的原因是因为缺少合适的工具去实现我们平面媒体中的内容。这也就造成了很多设计师的创意发挥，就算是有创意，前端实现也将付出巨大的开发成本。   <a id="more"></a><br>虽然CSS Shapes Module Level 1（CSS形状模块标准1）的规范出现，可以打破矩形设计的限制。但仍需要一些不规则的图形。而早前实现一些不规则的图形，都需借助其它的元素功能，比如CSS绘制图形，很多时候就依赖于伪元素，或多个元素。如此一来，CSS Shapes依旧无法发挥其强大的功能，让我们的Web打破常规的矩形布局。不过值得庆幸的是，CSS的clip-path出现，它可以帮助我们绘制很多特殊的图形（不规则的图形）</p>
-<p><strong>首先介绍一下CSS3里的clip-path属性</strong></p>
-<p>clip-path属性是CSS Masking模块的一部分。自从2000年以来，剪切都只是SVG中的一部分，现在将这个功能引入到CSS的Msking模块中，所以现在可以对HTML元素和SVG元素进行剪切。<br>clip-path属性是指定一个应用到元素上的剪切路径。应用在SVG中<clippath>元素上的属性值可以完全运用在clip-path的属性上。你还可以使用CSS Shapes模块中的基本形状来定义剪切路径。这些形状你可以使用形状函数来创建。这些形状态函数包括polygon()、circle()、inset()(用来定义嵌入的矩形)和ellipse()。</clippath></p>
-<p>polygon()函数定义一个多边形的剪切路径</p>
-<p> <strong>浏览器支持</strong></p>
-<p>IE 和 Edge 不支持这个属性。Firefox 仅部分支持 clip-path （它只支持 url() 语法）。但是 47 以上的版本，激活 Firefox 的 layout.css.clip-path-shapes.enabled选项就可以支持这个属性了。<br>Chrome、Safari 和 Opera 需要使用 -webkit- 前缀支持此属性。不幸的是，它们还不支持外部的 SVG 形状。</p>
+        <h2 id="数组检测最准确的方法"><a href="#数组检测最准确的方法" class="headerlink" title="数组检测最准确的方法"></a>数组检测最准确的方法</h2><p>前几天碰到一个牛客网的一个面试题是关于数组检测的，原题如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">如何判断一个js对象是否是<span class="built_in">Array</span>,arr为要判断的对象，其中最准确的方法是？</span><br><span class="line">A. typeof(arr)</span><br><span class="line">B. arr <span class="keyword">instanceof</span> <span class="built_in">Array</span></span><br><span class="line">C. arr.toString===<span class="string">'[object Array]'</span>;</span><br><span class="line">D. Object.prototype.toString.call(arr) === <span class="string">'[object Array]'</span>;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>刚开始做这个题，看到第二个选项就觉得差不多就是它了，但是还是往后看了其他两个选项，C选项也太不靠谱了，D选项什么鬼大一堆。然后就选了B，看完答案和解析后哭晕在厕所。。。</p>
+<p>解析：</p>
+<p>Object.prototype.toString.call(arr) === ‘[object Array]’;是最准确的方法。<br>因为在任何值上调用 Object 原生的 toString() 方法，都会返回一个 [object NativeConstructorName] 格式的字符串。每个类在内部都有一个 [[Class]] 属性，这个属性中就指定了上述字符串中的构造函数名。</p>
+<p><strong>其他方法：</strong></p>
+<ol>
+<li><p>Instanceof<br>value instanceof Array<br>instanceof操作符的问题在于，它假定只有一个全局执行环境。如果网页中包含多个框架，那实际上就存在两个以上不同的全局执行环境，从而存在两个以上不同版本的 Array 构造函数。如果你从一个框架向另一个框架传入一个数组，那么传入的数组与在第二个框架中原生创建的数组分别具有各自不同的构造函数。</p>
+</li>
+<li><p>Array.isArray()<br>支持 Array.isArray() 方法的浏览器有 IE9+、Firefox 4+、Safari 5+、Opera 10.5+和 Chrome。</p>
+</li>
+</ol>
 
       
     </div>
@@ -238,18 +248,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/02/27/对arguments对象的认识/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          对arguments对象的认识
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/08/05/一首老歌/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">一首老歌</div>
+    <a href="/2017/03/03/Js的作用域与作用链/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Js的作用域与作用链</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -284,7 +285,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="clip-path-属性" data-title="clip-path 属性" data-url="http://yoursite.com/2016/08/09/clip-path-属性/"></div>
+	<div class="ds-thread" data-thread-key="数组检测方法" data-title="数组检测方法" data-url="http://yoursite.com/2017/03/07/数组检测方法/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
