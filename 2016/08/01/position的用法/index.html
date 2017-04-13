@@ -7,16 +7,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>position的用法 | Mengying</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="首先是w3School给position的定义absolute生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。fixed生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。rela">
+  <meta name="description" content="position的取值
+
+static该关键字指定元素使用正常的布局行为，即元素在文档流中当前的布局位置。此时 top, right, bottom, left 和 z-index 属性无效。
+relative生成相对定位元素。该关键字下，元素先放置在未添加定位时的位置，再在不改变页面布局的前提下调整元素位置（因此会在此元素未添加定位时所在位置留下空白）。position:relative 未定">
 <meta property="og:type" content="article">
 <meta property="og:title" content="position的用法">
 <meta property="og:url" content="http://yoursite.com/2016/08/01/position的用法/index.html">
 <meta property="og:site_name" content="Mengying">
-<meta property="og:description" content="首先是w3School给position的定义absolute生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。fixed生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。rela">
-<meta property="og:updated_time" content="2017-04-08T08:53:35.259Z">
+<meta property="og:description" content="position的取值
+
+static该关键字指定元素使用正常的布局行为，即元素在文档流中当前的布局位置。此时 top, right, bottom, left 和 z-index 属性无效。
+relative生成相对定位元素。该关键字下，元素先放置在未添加定位时的位置，再在不改变页面布局的前提下调整元素位置（因此会在此元素未添加定位时所在位置留下空白）。position:relative 未定">
+<meta property="og:image" content="http://yoursite.com/img/sticky.jpg">
+<meta property="og:updated_time" content="2017-04-13T09:32:29.002Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="position的用法">
-<meta name="twitter:description" content="首先是w3School给position的定义absolute生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。fixed生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。rela">
+<meta name="twitter:description" content="position的取值
+
+static该关键字指定元素使用正常的布局行为，即元素在文档流中当前的布局位置。此时 top, right, bottom, left 和 z-index 属性无效。
+relative生成相对定位元素。该关键字下，元素先放置在未添加定位时的位置，再在不改变页面布局的前提下调整元素位置（因此会在此元素未添加定位时所在位置留下空白）。position:relative 未定">
+<meta name="twitter:image" content="http://yoursite.com/img/sticky.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Mengying" type="application/atom+xml">
   
@@ -224,12 +235,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="首先是w3School给position的定义"><a href="#首先是w3School给position的定义" class="headerlink" title="首先是w3School给position的定义"></a>首先是w3School给position的定义</h1><p><em>absolute</em><br>生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。<br><strong>fixed</strong><br>生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。<br><strong>relative</strong><br>生成相对定位的元素，相对于其正常位置进行定位。因此，”left:20” 会向元素的 LEFT 位置添加 20 像素。<br><strong>static</strong><br>默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。<br><strong>inherit</strong><br>规定应该从父元素继承 position 属性的值。<br><a id="more"></a></p>
-<h1 id="相对定位和绝对定位"><a href="#相对定位和绝对定位" class="headerlink" title="相对定位和绝对定位"></a>相对定位和绝对定位</h1><p> 包含属性：relative（相对） absolute（绝对）</p>
+        <blockquote>
+<p><strong>position的取值</strong></p>
+</blockquote>
+<p><strong>static</strong><br>该关键字指定元素使用正常的布局行为，即元素在文档流中当前的布局位置。此时 top, right, bottom, left 和 z-index 属性无效。</p>
+<p><strong>relative</strong><br>生成相对定位元素。该关键字下，元素先放置在未添加定位时的位置，再在不改变页面布局的前提下调整元素位置（因此会在此元素未添加定位时所在位置留下空白）。position:relative 未定义对 table-*-group, table-row, table-column, table-cell, table-caption 元素应用的效果。</p>
+<p><strong>absolute</strong><br>生成绝对定位元素。不为元素预留空间，通过指定元素相对于最近的非 static 定位祖先元素的偏移，来确定元素位置。绝对定位的元素可以设置外边距（margins），且不会与其他边距合并。</p>
+<p><strong>fixed</strong><br>生成绝对定位元素。不为元素预留空间，而是通过指定元素相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。打印时，元素会出现在的每页的固定位置。fixed 属性会创建新的栈上下文。当元素祖先的 transform  属性非 none 时，容器由视口改为该祖先。</p>
+<p><strong>sticky</strong>(试验性属性)<br>生成粘性定位元素。盒位置根据正常流计算(这称为正常流动中的位置)，然后相对于该元素在流中的 flow root（BFC）和 containing block（最近的块级祖先元素）定位。在所有情况下（即便被定位元素为 table 时），该元素定位均不对后续元素造成影响。当元素 B 被粘性定位时，后续元素的位置仍按照 B 未定位时的位置来确定。position: sticky 对 table 元素的效果与 position: relative 相同。</p>
+<a id="more"></a>
+<blockquote>
+<p><strong>相对定位和绝对定位</strong></p>
+</blockquote>
+<p> 包含属性：relative（相对） absolute（绝对）</p>
 <p>1.position:relative; 如果对一个元素进行相对定位，首先它将出现在它所在的位置上。然后通过设置垂直或水平位置，让这个元素”相对于”它的原始起点进行移动。（再一点，相对定位时，无论是否进行移动，元素仍然占据原来的空间。因此，移动元素会导致它覆盖其他框）</p>
-<p>2.position:absolute; 表示绝对定位，位置将依据浏览器左上角开始计算。 绝对定位使元素脱离文档流，因此不占据空间。普通文档流中元素的布局就像绝对定位的元素不存在时一样。（因为绝对定位的框与文档流无关，所以它们可以覆盖页面上的其他元素并可以通过z-index来控制它层级次序。z-index的值越高，它显示的越在上层。）</p>
+<p>2.position:absolute; 表示绝对定位。 绝对定位使元素脱离文档流，因此不占据空间。普通文档流中元素的布局就像绝对定位的元素不存在时一样。（因为绝对定位的框与文档流无关，所以它们可以覆盖页面上的其他元素并可以通过z-index来控制它层级次序。z-index的值越高，它显示的越在上层。）</p>
 <p>3.父容器使用相对定位，子元素使用绝对定位后，这样子元素的位置不再相对于浏览器左上角，而是相对于父容器左上角</p>
-<p>4.相对定位和绝对定位需要配合top、right、bottom、left使用来定位具体位置，这四个属性只有在该元素使用定位后才生效，其它情况下无效。另外这四个属性同时只能使用相邻的两个，不能即使用上又使用下，或即使用左，又使用右</p>
+<p>4.相对定位和绝对定位需要配合top、right、bottom、left使用来定位具体位置，这四个属性只有在该元素使用定位后才生效，其它情况下无效。另外这四个属性同时只能使用相邻的两个，不能即使用上又使用下，或即使用左，又使用右。</p>
+<blockquote>
+<p><strong>粘性定位</strong></p>
+</blockquote>
+<ul>
+<li>元素不会脱离文档流，并保留元素在文档流中占位的大小</li>
+<li>元素在容器中被滚动超过指定的偏移值时，元素在容器内固定在指定位置</li>
+<li>元素固定的相对偏移是相对于离它最近的具有滚动框的祖先元素，如果祖先元素都不可以滚动，那么是相对于viewport来计算元素的偏移量</li>
+</ul>
+<p>以 top:10px 为例，当页面滚动到sticky在文档流中位置元素离viewport顶端的距离&lt;=10px时，sticky元素就开始固定了，当sticky元素在文档流中位置离viewport顶端的距离&gt;10px时，元素就不再固定。当该元素碰到父容器的边缘时，就会跟随父容器一起滚动。</p>
+<p>下面是从MDN拉过来的测试用例网址<br><a href="https://codepen.io/anon/pen/ybLQQG" target="_blank" rel="external">试一试</a></p>
+<p>去年暑假用js实现了一个与这个类似的效果，就是通过js监听window的 scroll 事件，当需要固定的元素滚动到窗口顶部时，把元素的position属性设置为fixed，否则，取消fixed。<br>但是，在桌面浏览器效果还可以，在移动端的浏览器效果就不那么平滑了。<br>用这个属性就可以很好的解决这个问题啦。。。<br>但是<br>但是<br>它还是一个试验属性，很多浏览器都不兼容<br><img src="/img/sticky.jpg"></p>
 
       
     </div>

@@ -658,7 +658,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="首先是w3School给position的定义"><a href="#首先是w3School给position的定义" class="headerlink" title="首先是w3School给position的定义"></a>首先是w3School给position的定义</h1><p><em>absolute</em><br>生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。<br><strong>fixed</strong><br>生成绝对定位的元素，相对于浏览器窗口进行定位。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。<br><strong>relative</strong><br>生成相对定位的元素，相对于其正常位置进行定位。因此，”left:20” 会向元素的 LEFT 位置添加 20 像素。<br><strong>static</strong><br>默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。<br><strong>inherit</strong><br>规定应该从父元素继承 position 属性的值。<br>
+        <blockquote>
+<p><strong>position的取值</strong></p>
+</blockquote>
+<p><strong>static</strong><br>该关键字指定元素使用正常的布局行为，即元素在文档流中当前的布局位置。此时 top, right, bottom, left 和 z-index 属性无效。</p>
+<p><strong>relative</strong><br>生成相对定位元素。该关键字下，元素先放置在未添加定位时的位置，再在不改变页面布局的前提下调整元素位置（因此会在此元素未添加定位时所在位置留下空白）。position:relative 未定义对 table-*-group, table-row, table-column, table-cell, table-caption 元素应用的效果。</p>
+<p><strong>absolute</strong><br>生成绝对定位元素。不为元素预留空间，通过指定元素相对于最近的非 static 定位祖先元素的偏移，来确定元素位置。绝对定位的元素可以设置外边距（margins），且不会与其他边距合并。</p>
+<p><strong>fixed</strong><br>生成绝对定位元素。不为元素预留空间，而是通过指定元素相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。打印时，元素会出现在的每页的固定位置。fixed 属性会创建新的栈上下文。当元素祖先的 transform  属性非 none 时，容器由视口改为该祖先。</p>
+<p><strong>sticky</strong>(试验性属性)<br>生成粘性定位元素。盒位置根据正常流计算(这称为正常流动中的位置)，然后相对于该元素在流中的 flow root（BFC）和 containing block（最近的块级祖先元素）定位。在所有情况下（即便被定位元素为 table 时），该元素定位均不对后续元素造成影响。当元素 B 被粘性定位时，后续元素的位置仍按照 B 未定位时的位置来确定。position: sticky 对 table 元素的效果与 position: relative 相同。</p>
       
     </div>
     
