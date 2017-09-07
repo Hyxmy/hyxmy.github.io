@@ -5,14 +5,33 @@
   
   <meta name="baidu-site-verification" content="ssHrzA8KYT" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives | Mengying</title>
+  <title>Es5的严格模式 | Mengying</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Mengying">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="最近重温了一下es5的严格模式，以下是一些笔记
+设立严格模式的目的：
+消除javascript语法的一些不合理、不严谨之处，减少一些怪异行为
+消除代码运行的一些不安全之处，保证代码安全
+提高编译器的效率，增加运行效率
+为未来的JavaScript做好铺垫">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Es5的严格模式">
+<meta property="og:url" content="http://yoursite.com/2017/09/07/Es5的严格模式/index.html">
 <meta property="og:site_name" content="Mengying">
+<meta property="og:description" content="最近重温了一下es5的严格模式，以下是一些笔记
+设立严格模式的目的：
+消除javascript语法的一些不合理、不严谨之处，减少一些怪异行为
+消除代码运行的一些不安全之处，保证代码安全
+提高编译器的效率，增加运行效率
+为未来的JavaScript做好铺垫">
+<meta property="og:updated_time" content="2017-09-07T15:25:05.108Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mengying">
+<meta name="twitter:title" content="Es5的严格模式">
+<meta name="twitter:description" content="最近重温了一下es5的严格模式，以下是一些笔记
+设立严格模式的目的：
+消除javascript语法的一些不合理、不严谨之处，减少一些怪异行为
+消除代码运行的一些不安全之处，保证代码安全
+提高编译器的效率，增加运行效率
+为未来的JavaScript做好铺垫">
   
     <link rel="alternative" href="/atom.xml" title="Mengying" type="application/atom+xml">
   
@@ -183,119 +202,142 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-Es5的严格模式" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2017/09/07/Es5的严格模式/" class="article-date">
+  	<time datetime="2017-09-07T15:17:48.000Z" itemprop="datePublished">2017-09-07</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Es5的严格模式
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/26/get和post方法的区别/" class="archive-article-date">
-  	<time datetime="2016-07-26T06:34:31.000Z" itemprop="datePublished">Jul 26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/26/get和post方法的区别/">get和post方法的区别</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近重温了一下es5的严格模式，以下是一些笔记</p>
+<h1 id="设立严格模式的目的："><a href="#设立严格模式的目的：" class="headerlink" title="设立严格模式的目的："></a><strong>设立严格模式的目的：</strong></h1><ol>
+<li>消除javascript语法的一些不合理、不严谨之处，减少一些怪异行为</li>
+<li>消除代码运行的一些不安全之处，保证代码安全</li>
+<li>提高编译器的效率，增加运行效率</li>
+<li>为未来的JavaScript做好铺垫<a id="more"></a>
+<h1 id="如何调用严格模式"><a href="#如何调用严格模式" class="headerlink" title="如何调用严格模式"></a><strong>如何调用严格模式</strong></h1><ul>
+<li>针对脚本文件<br>将”use strict”放在脚本文件的第一行<br>将“use strict”直接放在脚本文件的第一行，不利于脚本的合并（严格模式和非严格模式的合并）。<br>可以将脚本文件放在(function () {})()。</li>
+<li>针对函数<br>将”use strict”放在函数体的第一行<blockquote>
+<p>严格模式对javascript的语法和行为的改变</p>
+</blockquote>
+</li>
+<li>全局变量必须提前声明</li>
+<li>禁止使用with</li>
+<li>eval将生成作用域</li>
+<li>禁止this指向全局</li>
+<li>禁止在函数内遍历调用栈</li>
+<li>无法删除变量，只有当configurable设为true的对象属性，才能被删除</li>
+<li>显示报错</li>
+<li>对只读属性进行赋值</li>
+<li>使用getter方法读取的属性进行赋值</li>
+<li>禁止扩展的对象添加新属性</li>
+<li>删除一个不可删除的属性</li>
+<li>对象不能有重名属性</li>
+<li>函数不能有重名参数</li>
+<li>禁止八进制表示法</li>
+<li>不允许对arguments赋值</li>
+<li>arguments不再追踪参数变化</li>
+<li>禁止使用arguments.calllee</li>
+<li>函数必须声明在顶层</li>
+<li>一些保留字不能用</li>
+</ul>
+</li>
+</ol>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计算机网络/">计算机网络</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/24/测试/" class="archive-article-date">
-  	<time datetime="2016-07-24T07:32:11.000Z" itemprop="datePublished">Jul 24</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/24/测试/">陈奕迅《今天只做一件事》</a>
-    </h1>
   
+    <a href="/2017/09/07/关于等于/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于等于</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/音乐/">音乐</a></li></ul>
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/23/my-frist-blog/" class="archive-article-date">
-  	<time datetime="2016-07-23T07:41:07.000Z" itemprop="datePublished">Jul 23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/23/my-frist-blog/">my frist blog</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
-  
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Es5的严格模式" data-title="Es5的严格模式" data-url="http://yoursite.com/2017/09/07/Es5的严格模式/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"hyxmy"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -321,8 +363,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
