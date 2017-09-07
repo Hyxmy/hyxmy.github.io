@@ -329,7 +329,7 @@ AJAX无法请求">
 </blockquote>
 <p>适用情况：AJAX请求</p>
 <p>JSONP是服务器与客户端跨源通信的常用方法。最大特点就是简单适用，老式浏览器全部支持，服务器改造非常小。<br>在代码里添加如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"http://example.com/ip?callback=foo"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">	Console.log(data.ip);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"http://example.com/ip?callback=foo"</span>&gt;&lt;/script&gt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">	Console.log(data.ip);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>向服务器example.com发出请求，该请求的查询字符串有一个参数callback，用来指定回调函数的名字，这对JSONP是必须的。<br>服务器收到这个请求以后，会将数据放在回调函数的参数(被视为JavaScript对象，而不是字符串)位置返回。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Foo(&#123;</span><br><span class="line">	<span class="string">"ip"</span>: <span class="string">"8.8.8.8"</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -348,6 +348,15 @@ AJAX无法请求">
   
     
 <nav id="article-nav">
+  
+    <a href="/2017/09/07/关于等于/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          关于等于
+        
+      </div>
+    </a>
   
   
     <a href="/2017/03/14/构造函数和普通函数的区别/" id="article-nav-older" class="article-nav-link-wrap">
